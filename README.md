@@ -52,32 +52,62 @@
 
 ## Partie 1 : Multiplication de matrices
 
-On nous donne les matrices suivantes :
+### Données :
+
 - Matrice A :
+
   \[
-  A = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}
-  \]
-- Matrice B :
-  \[
-  B = \begin{pmatrix} 10 & 11 \\ 13 & 14 \\ 16 & 17 \end{pmatrix}
+  A = \begin{pmatrix} 
+  1 & 2 & 3 \\
+  4 & 5 & 6
+  \end{pmatrix}
   \]
 
-Le produit des matrices \( A \times B \) est :
+- Matrice B :
+
+  \[
+  B = \begin{pmatrix}
+  10 & 11 \\
+  13 & 14 \\
+  16 & 17
+  \end{pmatrix}
+  \]
+
+### Calcul de la multiplication \( A \times B \) :
+
+Le produit des matrices \( A \) et \( B \) est donné par la matrice C :
+
 \[
-C = \begin{pmatrix} 84 & 90 \\ 201 & 216 \end{pmatrix}
+C = \begin{pmatrix}
+84 & 90 \\
+201 & 216
+\end{pmatrix}
 \]
+
+---
 
 ## Partie 2 : Rotation dans \( \mathbb{R}^3 \)
 
-### Matrice de rotation autour de la droite \( D_1 \) (passant par \( (0, 0, 0) \) et \( (255, 255, 255) \)) :
+La matrice de rotation est calculée autour de la droite \( D_1 \), passant par les points \( (0, 0, 0) \) et \( (255, 255, 255) \).
 
-La matrice de rotation dans \( \mathbb{R}^3 \) peut être définie à l'aide de la formule de Rodrigues et du vecteur directeur \( \mathbf{v} = (255, 255, 255) \).
+**Matrice de Rotation** :  
+La matrice de rotation dans \( \mathbb{R}^3 \) autour de \( D_1 \) dépend de l'axe de rotation et de l'angle que nous souhaitons appliquer, calculé à l'aide de la formule de Rodrigues.
 
-### Transformation bonus (projection orthogonale) :
+---
 
-- Après une rotation, une projection orthogonale est appliquée pour maintenir les couleurs dans l'orthogonal de \( D_1 \).
-- La matrice de projection est :
-  \[
-  P = I - \frac{\mathbf{v} \mathbf{v}^T}{\|\mathbf{v}\|^2}
-  \]
-- Cette transformation permet de garder les couleurs dans l'espace RGB après la rotation.
+## Bonus : Projection Orthogonale
+
+Pour garantir que les points transformés restent dans l'espace RGB après la rotation, nous appliquons une projection orthogonale à la droite \( D_1 \). Cela permet de conserver les couleurs dans le cube des couleurs.
+
+**Matrice de Projection** :
+
+\[
+P = I - \frac{\mathbf{v} \mathbf{v}^T}{\|\mathbf{v}\|^2}
+\]
+
+---
+
+## Conclusion
+
+- La **rotation** transforme les points dans l'espace \( \mathbb{R}^3 \) autour de l'axe défini par \( D_1 \).
+- La **projection orthogonale** garantit que les couleurs restent dans l'espace RGB tout en préservant la géométrie de la transformation.
