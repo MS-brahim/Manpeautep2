@@ -48,6 +48,7 @@
 ```
 
 
-# Exercice 2 : Mathématiques
+# [Exercice 2, Mathématiques](https://github.com/MS-brahim/Manpeautep2/blob/master/matrix_rotation_transform.js)
+
 
 
